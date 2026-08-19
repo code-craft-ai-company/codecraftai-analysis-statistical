@@ -30,18 +30,18 @@ keywords = [
 packages = [{include="ccai", from="source/packages"}]
 
 [tool.poetry.urls]
-Homepage = "https://github.com/automationmojo/codecraftai-analysis-statistical"
-Repository = "https://github.com/automationmojo/codecraftai-analysis-statistical"
-Issues = "https://github.com/automationmojo/codecraftai-analysis-statistical/issues"
+Homepage = "https://github.com/code-craft-ai-company/codecraftai-analysis-statistical"
+Repository = "https://github.com/code-craft-ai-company/codecraftai-analysis-statistical"
+Issues = "https://github.com/code-craft-ai-company/codecraftai-analysis-statistical/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 numpy = "^2.0"
-codecraftai-errors = { git = "https://github.com/automationmojo/codecraftai-errors.git", branch = "main" }
+codecraftai-errors = { git = "https://github.com/code-craft-ai-company/codecraftai-errors.git", branch = "main" }
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6"
-codecraftai-testbase = { git = "https://github.com/automationmojo/codecraftai-testbase.git", branch = "main" }
+codecraftai-testbase = { git = "https://github.com/code-craft-ai-company/codecraftai-testbase.git", branch = "main" }
 
 
 [tool.ruff]
