@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "codecraftai-analysis-statistical"
 description = "Code Craft AI Statistical Analysis Library -- SAS-comparable DATA-step semantics in Python."
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Code Craft AI LLC <info@code-craft.ai>"]
 readme = "README.rst"
 license = "LicenseRef-CodeCraftAI-Dual-License"
@@ -37,12 +37,18 @@ Issues = "https://github.com/code-craft-ai-company/codecraftai-analysis-statisti
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 numpy = "^2.0"
-codecraftai-errors = { git = "https://github.com/code-craft-ai-company/codecraftai-errors.git", branch = "main" }
+codecraftai-errors = { version = "<2.0.0", source = "codecraftai" }
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6"
-codecraftai-testbase = { git = "https://github.com/code-craft-ai-company/codecraftai-testbase.git", branch = "main" }
+codecraftai-testbase = { version = "<2.0.0", source = "codecraftai" }
 
+
+
+[[tool.poetry.source]]
+name = "codecraftai"
+url = "https://code-craft.ai/licensed-repository/simple/"
+priority = "supplemental"
 
 [tool.ruff]
 target-version = "py310"
