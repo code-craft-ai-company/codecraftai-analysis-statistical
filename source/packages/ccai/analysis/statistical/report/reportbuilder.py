@@ -135,7 +135,7 @@ class ReportBuilder:
                                   reason="vectorizable conditional (runs in loop for now)"))
             for assigned_name in Scheduler.assigned(stmt=stmt):
                 available.discard(assigned_name)
-        elif isinstance(stmt, (OutputNode, DeleteNode)):
+        elif isinstance(stmt, OutputNode | DeleteNode):
             label = type(stmt).__name__.lower().replace("node", "")
             lines.append(Line(index=index, stmt=label, klass="loop",
                               category="cardinality",

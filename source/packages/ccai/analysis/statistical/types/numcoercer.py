@@ -38,7 +38,7 @@ class NumCoercer:
             rtnval = value
         elif isinstance(value, bool):
             rtnval = 1 if value else 0
-        elif isinstance(value, (int, float)):
+        elif isinstance(value, int | float):
             rtnval = value
         else:
             try:

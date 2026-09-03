@@ -51,7 +51,7 @@ class Classifier:
         """
         if isinstance(node, CROSS_ROW_NODES):
             rtnval = True
-        elif isinstance(node, (ConstNode, ColNode)):
+        elif isinstance(node, ConstNode | ColNode):
             rtnval = False
         elif isinstance(node, BinOpNode):
             rtnval = (cls.expr_is_sequential(node=node.left)
@@ -80,7 +80,7 @@ class Classifier:
         """
         out: list[tuple[Any, str]] = []
         for stmt in stmts:
-            if isinstance(stmt, (OutputNode, DeleteNode)):
+            if isinstance(stmt, OutputNode | DeleteNode):
                 out.append((stmt, "seq"))
             elif isinstance(stmt, AssignNode):
                 if cls.expr_is_sequential(node=stmt.expr) is True:
