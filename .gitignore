@@ -139,3 +139,6 @@ workspaces/*.code-workspace
 
 # OS clutter
 .DS_Store
+
+# uv can resolve this project too, but poetry.lock is the lockfile of record.
+uv.lock
