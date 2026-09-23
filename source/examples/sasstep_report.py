@@ -22,9 +22,21 @@ Same oracle, same IR -- so the advice matches what the executor actually does.
 from __future__ import annotations
 from dataclasses import dataclass, field
 
-from sasstep_ir import (lower, Unsupported, _expr_sequential,
-                        Assign, If, Output, Delete, BinOp, Compare, BoolOp,
-                        Lag, Dif, FirstLast, Auto)
+from sasstep_ir import (
+                        lower,
+                        Unsupported,
+                        Assign,
+                        If,
+                        Output,
+                        Delete,
+                        BinOp,
+                        Compare,
+                        BoolOp,
+                        Lag,
+                        Dif,
+                        FirstLast,
+                        Auto,
+)
 from sasstep_exec import _reads, _assigned
 
 

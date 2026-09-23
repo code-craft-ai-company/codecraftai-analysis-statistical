@@ -25,8 +25,8 @@ from __future__ import annotations
 import ast
 import inspect
 import textwrap
-from dataclasses import dataclass, field
-from typing import Any, Optional
+from dataclasses import dataclass
+from typing import Any
 
 from sasstep import ObservationEngine, MISSING, Missing
 
@@ -93,9 +93,6 @@ class _Lowerer(ast.NodeVisitor):
             return Const(node.value)
         if isinstance(node, ast.Subscript) and self._is_pdv(node.value):
             return Col(self._index_str(node.slice))
-        if isinstance(node, ast.Attribute) and isinstance(node.value, ast.Subscript) \
-                and self._is_pdv_attr(node):                       # pdv.first["x"]
-            which = node.attr                                       # not reached; handled below
         if isinstance(node, ast.Subscript) and isinstance(node.value, ast.Attribute) \
                 and self._is_pdv(node.value.value) and node.value.attr in ("first", "last"):
             return FirstLast(node.value.attr, self._index_str(node.slice))

@@ -78,8 +78,8 @@ class Report:
             lines_out = [
                 "PATH: fallback (row loop, no vectorization)",
                 "  cause: {}".format(self.unsupported),
-                "  fix:   rewrite in the sublanguage (assignment / if / lag / "
-                "dif / first./last. / output) to enable any fast path.",
+                ("  fix:   rewrite in the sublanguage (assignment / if / lag / "
+                 "dif / first./last. / output) to enable any fast path."),
             ]
         else:
             fraction = "{}/{}".format(self.n_batch, self.n_total)

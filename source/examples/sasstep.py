@@ -24,7 +24,7 @@ from abc import ABC, abstractmethod
 from collections import deque
 from datetime import date, timedelta
 from enum import Enum, auto
-from typing import Any, Callable, Iterable, Iterator, Optional
+from typing import Any, Callable, Optional
 
 __all__ = [
     "Missing", "MISSING", "missing", "Phase",
@@ -201,9 +201,15 @@ class _Peekable:
 class Reader(ABC):
     """Every reader returns (row, in_flags, cur_key, next_key)."""
     @abstractmethod
-    def has_more(self) -> bool: ...
+    def has_more(self) -> bool:
+        """
+            Returns True while the reader has more observations to deliver.
+        """
     @abstractmethod
-    def next_obs(self): ...
+    def next_obs(self):
+        """
+            Returns the next (row, in_flags, cur_key, next_key) observation.
+        """
 
 
 class SetReader(Reader):

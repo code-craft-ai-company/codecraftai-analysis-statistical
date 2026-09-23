@@ -21,9 +21,19 @@ from __future__ import annotations
 import numpy as np
 
 from sasstep import ObservationEngine, SetReader
-from sasstep_ir import (lower, classify, Unsupported, ir_logic,
-                        _expr_sequential, Const, Col, BinOp, Compare, BoolOp,
-                        Assign, If, Output, Delete)
+from sasstep_ir import (
+                        lower,
+                        Unsupported,
+                        ir_logic,
+                        _expr_sequential,
+                        Const,
+                        Col,
+                        BinOp,
+                        Compare,
+                        BoolOp,
+                        Assign,
+                        If,
+)
 
 
 # ---- expression helpers ----------------------------------------------------
