@@ -1,6 +1,6 @@
-==============================
+================================
 codecraftai-analysis-statistical
-==============================
+================================
 
 Patterns for authoring and porting statistical analysis jobs to Python whose
 results are *directly comparable* to the equivalent SAS jobs. Built around a
