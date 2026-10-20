@@ -1,6 +1,6 @@
 [project]
 name = "codecraftai-analysis-statistical"
-version = "1.2.0"
+version = "1.2.1"
 description = "Code Craft AI Statistical Analysis Library -- SAS-comparable DATA-step semantics in Python."
 readme = "README.rst"
 license = "LicenseRef-CodeCraftAI-Source-Available"
